@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Index</title>
+</head>
+<body>
+    <h1>CATEGORIAS</h1>
+    <table>
+        <tr>
+            <th>Id Categoria</th>
+            <th>Nombre Categoria</th>
+            <th>Descripcion Categoria</th>
+        </tr>
+        {% for category in data %}
+            <tr>
+                <td>{{ category.idCategory }}</td>
+                <td>{{ category.nameCategory }}</td>
+                <td>{{ category.desCategory }}</td>
+                
+            </tr>
+</body>
+</html>
