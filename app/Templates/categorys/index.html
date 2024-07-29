@@ -3,23 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Category Index</title>
 </head>
 <body>
-    <h1>CATEGORIAS</h1>
-    <table>
-        <tr>
-            <th>Id Categoria</th>
-            <th>Nombre Categoria</th>
-            <th>Descripcion Categoria</th>
-        </tr>
-        {% for categoria in data %}
-            <tr>
-                <td>{{ categoria.idCategory }}</td>
-                <td>{{ categoria.nameCategory }}</td>
-                <td>{{ categoria.desCategory }}</td>
-                
-            </tr>
-        {% endfor %}
+    <h1>BIENVENIDOS SUPERMARKET</h1>
+    <div class="general-content">
+        <h2>FRUTAS Y VERDURAS</h2>
+        <img src="imagenes/FrutasVerduras.jpeg" alt="img verduras">
+        <h3>Descripcion:</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Nobis accusamus aspernatur mollitia, neque est
+             dolorum velit consequuntur, minus laudantium totam 
+             magni iure ad sit consequatur, ipsam nulla 
+             reprehenderit perferendis dolore.
+        </p>
+    </div>
+    <div class="general-content">
+        <h2>LACTEOS Y HUEVOS</h2>
+        <img src="imagenes/LacteosHuevos.jpeg" alt="img verduras">
+        <h3>Descripcion:</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Nobis accusamus aspernatur mollitia, neque est
+             dolorum velit consequuntur, minus laudantium totam 
+             magni iure ad sit consequatur, ipsam nulla 
+             reprehenderit perferendis dolore.
+        </p>
+    </div>
+    <div class="general-content">
+        <h2>ARROZ, GRANOS Y PASTAS</h2>
+        <img src="imagenes/LacteosHuevos.jpeg" alt="img verduras">
+        <h3>Descripcion:</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Nobis accusamus aspernatur mollitia, neque est
+             dolorum velit consequuntur, minus laudantium totam 
+             magni iure ad sit consequatur, ipsam nulla 
+             reprehenderit perferendis dolore.
+        </p>
+    </div>
 </body>
 </html>
