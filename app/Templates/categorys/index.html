@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css')}}">
     <title>Category Index</title>
 </head>
 <body>
-    <h1>BIENVENIDOS SUPERMARKET</h1>
+    <h1>BIENVENIDOS A SUPERMARKET</h1>
     <div class="general-content">
         <h2>FRUTAS Y VERDURAS</h2>
-        <img src="imagenes/FrutasVerduras.jpeg" alt="img verduras">
+        <img src="{{ url_for('static', filename='imagenes/Verduras.jpeg') }}" alt="img verduras">
         <h3>Descripcion:</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing 
@@ -22,7 +22,7 @@
     </div>
     <div class="general-content">
         <h2>LACTEOS Y HUEVOS</h2>
-        <img src="imagenes/LacteosHuevos.jpeg" alt="img verduras">
+        <img src="{{ url_for('static', filename='imagenes/LacteosHuevos.jpeg') }}" alt="img verduras">
         <h3>Descripcion:</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing 
@@ -34,7 +34,7 @@
     </div>
     <div class="general-content">
         <h2>ARROZ, GRANOS Y PASTAS</h2>
-        <img src="imagenes/LacteosHuevos.jpeg" alt="img verduras">
+        <img src="{{ url_for('static', filename='imagenes/.jpeg') }}" alt="img verduras">
         <h3>Descripcion:</h3>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing 
