@@ -11,6 +11,5 @@ def create_app():
 
     from app.routes import category_routes
     app.register_blueprint(category_routes.bp)
-    #app.register_blueprint(book_routes.bp)
 
     return app

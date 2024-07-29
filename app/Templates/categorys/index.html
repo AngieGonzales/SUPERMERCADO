@@ -13,12 +13,13 @@
             <th>Nombre Categoria</th>
             <th>Descripcion Categoria</th>
         </tr>
-        {% for category in data %}
+        {% for categoria in data %}
             <tr>
-                <td>{{ category.idCategory }}</td>
-                <td>{{ category.nameCategory }}</td>
-                <td>{{ category.desCategory }}</td>
+                <td>{{ categoria.idCategory }}</td>
+                <td>{{ categoria.nameCategory }}</td>
+                <td>{{ categoria.desCategory }}</td>
                 
             </tr>
+        {% endfor %}
 </body>
 </html>
