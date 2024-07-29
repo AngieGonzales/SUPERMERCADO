@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Monserrat;
+    src: url('fonts/Montserrat-BlackItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 h1 {
     font-size: 40px;
     background-color: #e70023;
@@ -15,10 +22,6 @@ h2 {
 h3 {
     text-align: center;
 }
-.img-lacteos {
-    width: 60%;
-    height: 15%;
-}
 
 .general-content {
     width: 20%;
@@ -35,12 +38,26 @@ h3 {
 p {
     font-weight: bold;
     text-align: center;
+    font-family: Montserrat-BlackItalic;
 }
 
 .img-frutas {
     width: 70%;
+    height: 300%;
+    margin: auto;
+    margin-left: 28px;
+}
+
+.img-lacteos {
+    width: 70%;
     height: auto;
     margin: auto;
     margin-left: 28px;
+}
 
+.imagen-granos {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-left: 28px;
 }
