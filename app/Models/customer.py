@@ -7,3 +7,5 @@ class Customer(db.Model):
     addressCustomer = db.Column(db.String(25), nullable=False)
     phoneCustomer = db.Column(db.String(25), nullable=False)
     emailCustomer = db.Column(db.String(25), nullable=False)
+    nameUser = db.Column(db.String(25), nullable=False)
+    password = db.Column(db.String(25), nullable=False)
