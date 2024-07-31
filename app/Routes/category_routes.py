@@ -4,7 +4,7 @@ from app import db
 
 bp = Blueprint('category', __name__)
 
-@bp.route('/')
+@bp.route('/category')
 def index():
     data = Category.query.all()
     return render_template('categorys/index.html', data=data)

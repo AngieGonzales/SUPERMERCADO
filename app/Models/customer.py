@@ -9,3 +9,5 @@ class Customer(db.Model):
     emailCustomer = db.Column(db.String(25), nullable=False)
     nameUser = db.Column(db.String(25), nullable=False)
     password = db.Column(db.String(25), nullable=False)
+
+    sales = db.relationship("Sale", back_populates="customer")

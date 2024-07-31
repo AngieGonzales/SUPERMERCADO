@@ -8,5 +8,6 @@ class Product(db.Model):
     priceProduct = db.Column(db.Float, nullable=False)
     nameProduct = db.Column(db.String(225), nullable=False)
     stock = db.Column(db.Float(225), nullable=False)
-
     id_category = db.Column(db.Integer, db.ForeignKey('category.idCategory'))
+
+    sales = db.relationship("SaleDetail", back_populates="products")

@@ -1,22 +1,26 @@
-@font-face {
-    font-family: Monserrat;
-    src: url('fonts/Montserrat-BlackItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 60px;
     background-color: #e70023;
-    padding: 20px;
+    padding: 60px;
     color: white;
     text-align: center;
-    border-radius: 10px;
+    font-family: system-ui;
 }
 
 h2 {
     text-align: center;
     font-weight: bold;
+    font-family: system-ui;
+    font-size: 15px;
+    padding-top: 5px;
+    color: rgb(56, 55, 55);
 }
 
 h3 {
@@ -24,26 +28,30 @@ h3 {
 }
 
 .general-content {
-    width: 20%;
-    border: 4px solid #979494;
+    width: 70%;
+    height: 250px;
+    border: 2px solid #e70023;
     border-radius: 10px;
-    display: block;
-    margin: 10px;
+    margin-top: 40px;
+    padding: 0;
+    transition: .4s;
 }
 .general-content:hover {
-    border-color: rgb(216, 39, 83);
-    box-shadow: 4px 4px 4px rgba(245, 124, 124, 0.2);;
+    border-color: rgb(230, 15, 44);
+    box-shadow: 4px 4px 4px rgba(240, 125, 125, 0.952);
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 p {
-    font-weight: bold;
-    text-align: center;
-    font-family: Montserrat-BlackItalic;
+    text-align: justify;
+    font-family: Montserrat;
+    padding: 5px;
 }
 
 .img-frutas {
-    width: 70%;
-    height: 300%;
+    width: 40%;
+    height: 50%;
     margin: auto;
     margin-left: 28px;
 }
@@ -60,4 +68,12 @@ p {
     height: auto;
     margin: auto;
     margin-left: 28px;
+}
+
+.max-content{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    width: 90%;
+    margin: auto;
 }

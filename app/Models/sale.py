@@ -5,8 +5,9 @@ class Sale(db.Model):
     idSale = db.Column(db.Integer, primar_key=True)
     nameProductS = db.Column(db.String(25), nullable=False)
     totalPriceS = db.Column(db.String(25), nullable=False)
-    quantitySale = db.Column(db.String(25), nullable=False)
     dateSale = db.Column(db.String(25), nullable=False)
-
     id_customer = db.Column(db.Integer, db.ForeignKey('customer.idCustomer'))
     id_employee = db.Column(db.Integer, db.ForeignKey('employee.idEmployee'))
+
+    customer = db.relationship("Customer", back_populates="sales")
+    products = db.relationship("SaleDetail", back_populates="sale")
