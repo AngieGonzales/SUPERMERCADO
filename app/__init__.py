@@ -9,7 +9,9 @@ def create_app():
     
     db.init_app(app)
 
-    from app.routes import category_routes
-    app.register_blueprint(category_routes.bp)
+    from app.routes import  carrito_routes, principal_routes, product_routes
+    app.register_blueprint(carrito_routes.bp)
+    app.register_blueprint(principal_routes.bp)
+    app.register_blueprint(product_routes.bp)
 
     return app

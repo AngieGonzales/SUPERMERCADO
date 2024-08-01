@@ -8,7 +8,12 @@
 <body>
     <h1>PRODUCTOS</h1>
     <ul>
-        {% for product in products%}
+        {% for product in products %}
+        <li>
+            {{ product.nameProduct }} - ${{ product.priceProduct }}
+
+        </li>
+        {% endfor %}
     </ul>
 </body>
 </html>

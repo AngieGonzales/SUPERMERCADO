@@ -3,30 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito Compras</title>
+    <title>Carrito de Compras</title>
 </head>
 <body>
-    <h1>SUPERMARKET</h1>
-    <table>
-        <tr>
-            <th>NOMBRE</th>
-            <th>PRECIO</th>
-            <th>CANTIDAD</th>
-            <th>ACCIONES</th>
-        </tr>
+    <h1>Carrito de Compras</h1>
+    <ul>
         {% for item in items %}
-
-            <tr>
-                <td>{{ item['product'].nameProduct }}</td>
-                <td>{{ item['product'].priceProduct }}</td>
-                <td>{{ item['quantity'] }}</td>
-                <td>
-
-                </td>
-            </tr>
-            {% endfor %}
-    </table>
-    <a href="{{ url_for('factura.add')}}">Generar factura</a>
+            <li>{{ item.product.nameProduct}} - {{ item.quantity }} x ${{ item.product.priceProduct }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('carritos.realize_buy')}}">Realizar compra</a>
 </body>
 </html>
 

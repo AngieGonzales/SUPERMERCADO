@@ -5,21 +5,21 @@ from app.models.carrito import Carrito
 bp = Blueprint('carritos', __name__)
 carrito_buy = Carrito()
 
-@bp.route('/')
+@bp.route('/carritoCompras')
 def list():
     items = carrito_buy.getItems()
     return render_template('products/list.html', items=items)
 
 @bp.route('/ListarProductos')
-def index():
-    products = carrito_buy
-    return render_template('index.html', products=products)
+def principal():
+    products = Product.query.all()
+    return render_template('principales/principal.html', products=products)
 
-@bp.route('/add/<int:idProduct', methods=['POST'])
-def add_to_car(idProduct):
-    quantity = int(request.form[idProduct, quantity])
-    carrito_buy.add_product(idProduct, quantity)
-    return redirect(url_for('product.index'))
+@bp.route('/add/<int:id>', methods=['POST'])
+def add_to_car(id):
+    quantity = int(request.form[quantity])
+    carrito_buy.add_product(id, quantity)
+    return redirect(url_for('carritos.principal'))
 
 @bp.route('/realizar_compra')
 def realize_buy():
@@ -29,11 +29,11 @@ def realize_buy():
 @bp.route('/generar_factura', methods=['POST'])
 def generate_bill():
     total = carrito_buy.calculate_total()
-    carrito_buy.carrito = []
+    carrito_buy.clearcarrito = ()
     return render_template('factura.html', total = total)
 
 @bp.route('/itemscarrito', methods=['GET', 'POST'])
 def tcarrito():
-    a = carrito_buy.tamañoD()
+    a = carrito_buy.sizeD()
     print("Entra a carrito rutas", a)
-    return f"Entra a carrito {carrito_buy.tamañoD()}"
+    return f"Entra a carrito {carrito_buy.sizeD()}"

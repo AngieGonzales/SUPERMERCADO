@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylePrincipal.css')}}">
+    <script src="https://kit.fontawesome.com/f98b44af14.js" crossorigin="anonymous"></script>
+    <title>Primera Vista</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SUPERMARKET</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#"><i class="fa-regular fa-phone" style="color: #050505;"></i></a></li>
+            </ul>
+        </nav>
+        
+    </header>  
+    <div>
+        <h2>Categorias</h2>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="{{ url_for('principal.frutas_verduras') }}"><i class="fas fa-apple-alt"></i>Frutas y Verduras</a></li>
+                <li><a href="{{ url_for('principal.lacteos_huevos') }}"><i class="fas fa-glass-milk"></i>Lácteos y Huevos</a></li>
+                <li><a href="{{ url_for('principal.carnes') }}"><i class="fas fa-drumstick-bite"></i>Carnes</a></li>
+                <li><a href="{{ url_for('principal.arroz_granos_pastas') }}"><i class="fas fa-box"></i>Arroz, granos y pastas</a></li>
+                <li><a href="{{ url_for('principal.aceites_sal_endulzantes')}}"><i class="fas fa-oil-can"></i>Aceites, sal y endulzantes</a></li>
+                <li><a href="{{ url_for('principal.despensa')}}"><i class="fas fa-warehouse"></i>Despensa</a></li>
+                <li><a href="{{ url_for('principal.bebidas')}}"><i class="fas fa-beer"></i>Bebidas</a></li>
+                <li><a href="{{ url_for('principal.aseo_personal')}}"><i class="fas fa-toilet-paper"></i>Aseo Personal</a></li>
+                <li><a href="{{ url_for('principal.aseo_hogar')}}"><i class="fas fa-broom"></i>Aseo del Hogar</a></li>
+                <li><a href="{{ url_for('principal.mascotas')}}"><i class="fas fa-dog"></i>Mascotas</a></li>
+                <li><a href="{{ url_for('principal.licores')}}"><i class="fas fa-cocktail"></i>Licores</a></li>
+                <li><a href="{{ url_for('principal.salsas_sazonadores')}}"><i class="fas fa-pepper-hot"></i>Salsas y Sazonadores</a></li>
+            </ul>
+        </aside>
+        <div class="product-container">
+            {% for product in products %}
+            <div class="container">
+                <img src="" alt="banano">
+                <h2>{{ product.nameProduct }}</h2>
+                <h3>{{ product.weightProduct }}</h3>
+                <h3>{{ product.priceProduct }}</h3>
+                <form action="{{ url_for('carritos.add_to_car', id=product.idProduct) }}" method="POST">
+                    <input type="number" name="quantity" value="1" min="1">
+                    <button type="submit">Agregar</button>
+                </form>
+            </div>
+        {% endfor %}
+            <div class="container">
+                <img src="" alt="manzanas">
+                <h2>nombre de la fruta</h2>
+                <h3>peso de la fruta</h3>
+                <h3>precio de la fruta</h3>
+                <button>Agregar</button>
+            </div>
+            <div class="container">
+                <img src="" alt="fresas">
+                <h2>nombre de la fruta</h2>
+                <h3>peso de la fruta</h3>
+                <h3>precio de la fruta</h3>
+                <button>Agregar</button>
+            </div>
+            <div class="container">
+                <img src="" alt="sandias">
+                <h2>nombre de la fruta</h2>
+                <h3>peso de la fruta</h3>
+                <h3>precio de la fruta</h3>
+                <button>Agregar</button>
+            </div>
+        </div>
+        <main>
+            <section class="publicidad">
+                <div class="publi-content">
+                    <h2>Bienvenido a tu Supermercado Online</h2>
+                    <p>Encuentra todo lo que necesitas, desde la comodidad de tu hogar.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
